@@ -1,0 +1,28 @@
+<div class="container-fluid cont-header">
+
+    <div class="row">
+        <div class="col-sm-2">
+            <h3>Sort Issues By:</h3>
+        </div>
+        <div class="col-sm-10 sort-btns pull-left">
+            <button class="btn">Newest</button>
+            <button class="btn">Oldest</button>
+            <button class="btn">Most Commented</button>
+            <button class="btn">Least Commented</button>
+            <button class="btn">Recently Updated</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12" ng-repeat="data in gitData | orderBy:'none': false">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                    <span class="bold-data"><a href="#">{{data.title}}</a></span>
+                    <span class="badge">{{data.comments}}</span>
+                    <br>
+                    <span>{{'#'+data.number+" opened by "+data.user.login}}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

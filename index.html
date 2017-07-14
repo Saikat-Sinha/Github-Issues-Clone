@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" ng-app="GitHub">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <title>GitHub Issues Clone</title>
+    <base href="/" />
+</head>
+<body>
+    <!--<a href="/">Main</a>-->
+    <!--<a href="/addIssue"> add issue</a>-->
+
+
+    <header>
+        <div class="container-fluid cont-header">
+            <div class="row">
+                <div class="logo col-sm-4">
+                    <i class="fa fa-github-alt fa-4x" aria-hidden="true"></i>
+                    <span class="logo-text">
+                        <h2>GitHub</h2>
+                        <h4>Issues</h4>
+                    </span>
+                </div>
+                <div class="col-sm-4">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search Issues" id="txtSearch"/>
+                        <div class="input-group-btn">
+                            <button class="btn btn-grey" type="submit">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <a href="/addIssue" class="btn btn-green pull-right">New Issue<a/>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid cont-header1">
+        <div class="row">
+            <div class="col-sm-12 dir-link">
+                <i class="fa fa-book fa-2x" aria-hidden="true"></i>
+                <a href="https://github.com/facebook/" class="direct-link">Facebook</a>
+                <span class="direct-link">/</span>
+                <a href="https://github.com/facebook/react/issues" class="direct-link">React</a>
+            </div>
+        </div>
+    </div>
+
+    <div ng-controller="MainCtrl">
+        <div ng-view></div>
+    </div>
+    <script src="./node_modules/angular/angular.js"></script>
+    <script src="./node_modules/angular-route/angular-route.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
