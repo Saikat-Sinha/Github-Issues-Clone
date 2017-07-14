@@ -17,6 +17,7 @@ app.controller('MainCtrl',function ($scope, $http) {
     $http.get('https://api.github.com/repos/facebook/react/issues')
         .then(function (response) {
             $scope.gitData = response.data;
+            $scope.sortBy = "none";
         })
 });
 
